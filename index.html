@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restraunt Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="backToTop()">
+    <nav>
+        <span>S<span class="name">a</span>lty</span>
+
+        <ul class="sidebar">
+            <li><a onclick="backToTop()" href="#" id="home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#book-table">Book Table</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <ul class="navbar">
+            <li class="hideOnMobile"><a onclick="backToTop()" href="#hero">Home</a></li>
+            <li class="hideOnMobile"><a href="#about">About</a></li>
+            <li class="hideOnMobile"><a href="#menu">Menu</a></li>
+            <li class="hideOnMobile"><a href="#gallery">Gallery</a></li>
+            <li class="hideOnMobile"><a href="#book-table">Book Table</a></li>
+            <li class="hideOnMobile"><a href="#contact">Contact Us</a></li>
+            <li onclick="displaySidebar()" class="showOnMobile ">
+                <div class="hamburger">
+                    <input class="checkbox" type="checkbox" />
+                    <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                      <path
+                        class="lineTop line"
+                        stroke-linecap="round"
+                        stroke-width="4"
+                        stroke="black"
+                        d="M6 11L44 11"
+                      ></path>
+                      <path
+                        stroke-linecap="round"
+                        stroke-width="4"
+                        stroke="black"
+                        d="M6 24H43"
+                        class="lineMid line"
+                      ></path>
+                      <path
+                        stroke-linecap="round"
+                        stroke-width="4"
+                        stroke="black"
+                        d="M6 37H43"
+                        class="lineBottom line"
+                      ></path>
+                    </svg>
+                  </div>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>S<span>a</span>lty</h1>
+            <div>The House where taste is served with love and respect</div>
+            <div class="btn">
+                <button><a href="#menu">Menu</a></button>
+                <button><a href="#book-table">Book a table</a></button>
+            </div>
+        </div>
+        <span class="divider"></span>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us <span></span></h2>
+        <ul>
+            <li><b>At Salty, we believe that great food brings people together. Established in [Year], our mission has been to offer a fast, flavorful, and unforgettable dining experience for every customer. Located in the heart of [Region or City], we take pride in being a beloved part of the local community.</b></li>
+            <br><br>
+            <li>
+                <b>Our Story</b><br><br>
+                Our journey began with a simple idea: to create delicious, high-quality fast food that doesn't compromise on taste or freshness. From our humble beginnings, we have grown thanks to the support and love of our loyal customers. Our dedication to excellence and innovation has been the cornerstone of our success.
+            </li><br>
+            <li><b>Quality Ingredients : </b>We source only the freshest ingredients to prepare our meals. Our commitment to quality ensures that every bite is as delicious as the last</li><br>
+            <li><b>Exceptional Service : </b>Our friendly and dedicated staff are here to make your visit enjoyable and memorable. We believe in going the extra mile to ensure customer satisfaction.</li><br>
+            <li><b>Innovative Menu : </b>Our menu is crafted to offer a variety of mouth-watering options, from classic favorites to unique creations. Whether you're craving a juicy burger, crispy fries, or a refreshing shake, we have something for everyone.</li><br><br>
+            <li><b>Our Commitment</b><br><br>At Salty, we are committed to providing a dining experience that is fast, friendly, and fabulous. Whether you’re grabbing a quick lunch, enjoying dinner with family, or picking up a late-night snack, we strive to make every meal special. Thank you for choosing "Salty". We look forward to serving you soon!</li>
+        </ul>
+
+
+        <span class="divider"></span>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Menu and Pricing <span></span></h2>
+        <ul class="menu-link">
+            <li id="all-btn">All</li>
+            <li id="starters-btn">Starters</li>
+            <li id="salads-btn">Salads</li>
+            <li id="specials-btn">Speciality</li>
+        </ul>
+        <div class="menu-container">
+            <div id="bread-barrel" class="menu-item">
+                <img src="menu/bread-barrel.jpg" alt="Not Found">
+                <div class="card">
+                    <span class="name"><b>Bread Barrel</b></span>
+                    <span class="price"><b>$6.95</b></span>
+                    <br>
+                    <span class="tags">
+                        Lorem, deren, trataro, filede, nerada
+                    </span>
+                </div>
+            </div>
+            <div id="mozzarella" class="menu-item">
+                <img src="menu/mozzarella.jpg" alt="Not Found">
+                <div class="card">
+                    <span class="name"><b>Mozzarella Stick</b></span>
+                    <span class="price"><b>$4.95</b></span>
+                    <br>
+                    <span class="tags">Lorem, deren, trataro, filede, nerada</span>
+                </div>
+            </div>
+            <div id="lobster-bisque" class="menu-item">
+                <img src="menu/lobster-bisque.jpg" alt="Not Found">
+                <div class="card">
+                    <span class="name"><b>Lobster Bisque</b></span>
+                    <span class="price"><b>$5.95</b></span>
+                    <br>
+                    <span class="tags">Lorem, deren, trataro, filede, nerada</span>
+                </div>
+            </div>
+            <div id="caesar" class="menu-item">
+                <img src="menu/caesar.jpg" alt="Not Found">
+                <div class="card">
+                    <span class="name"><b>Caesar Selections</b></span>
+                    <span class="price"><b>$8.95</b></span>
+                    <br>
+                    <span class="tags">Lorem, deren, trataro, filede, nerada</span>
+                </div>
+            </div>
+            <div id="cake" class="menu-item">
+                <img src="menu/cake.jpg" alt="Not Found">
+                <div class="card">
+                    <span class="name"><b>Crab Cake</b></span>
+                    <span class="price"><b>$7.95</b></span>
+                    <br>
+                    <span class="tags">A delicate crab cake served on a toasted roll with lettuce and tartar sauce</span>
+                </div>
+            </div>
+            <div id="greek-salad" class="menu-item">
+                <img src="menu/greek-salad.jpg" alt="Not Found">
+                <div class="card">
+                    <span class="name"><b>Greek Salad</b></span>
+                    <span class="price"><b>$9.95</b></span>
+                    <br>
+                    <span class="tags">Fresh spinach, crisp romaine, tomatoes, and Greek olives</span>
+                </div>
+            </div>
+            <div id="tuscan-grilled" class="menu-item">
+                <img src="menu/tuscan-grilled.jpg" alt="Not Found">
+                <div class="card">
+                    <span class="name"><b>Tuscan Grilled</b></span>
+                    <span class="price"><b>$9.95</b></span>
+                    <br>
+                    <span class="tags">Grilled chicken with provolone, artichoke hearts, and roasted red pesto</span>
+                </div>
+            </div>
+            <div id="spinach-salad" class="menu-item">
+                <img src="menu/spinach-salad.jpg" alt="Not Found">
+                <div class="card">
+                    <span class="name"><b>Spinach Salad</b></span>
+                    <span class="price"><b>$9.95</b></span>
+                    <br>
+                    <span class="tags">Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette</span>
+                </div>
+            </div>
+            <div id="lobster-roll" class="menu-item">
+                <img src="menu/lobster-roll.jpg" alt="Not Found">
+                <div class="card">
+                    <span class="name"><b>Lobster Roll</b></span>
+                    <span class="price"><b>$12.95</b></span>
+                    <br>
+                    <span class="tags">Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll</span>
+                </div>
+            </div>
+        </div>
+
+
+        <span class="divider"></span>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2>Gallery <span></span></h2>
+        <div class="img-container">
+            <div class="img1"><img src="gallery/gallery-1.jpg" alt="Not Found"></div>
+            <div class="img2"><img src="gallery/gallery-2.jpg" alt="Not Found"></div>
+            <div class="img3"><img src="gallery/gallery-3.jpg" alt="Not Found"></div>
+            <div class="img4"><img src="gallery/gallery-4.jpg" alt="Not Found"></div>
+            <div class="img5"><img src="gallery/gallery-5.jpg" alt="Not Found"></div>
+            <div class="img6"><img src="gallery/gallery-6.jpg" alt="Not Found"></div>
+            <div class="img7"><img src="gallery/gallery-7.jpg" alt="Not Found"></div>
+            <div class="img8"><img src="gallery/gallery-8.jpg" alt="Not Found"></div>
+
+        </div>
+        <span class="divider"></span>
+    </section>
+
+    <section class="book-table" id="book-table">
+        <h2>Book a table <span></span></h2>
+        <form action="#">
+            <input required type="text" name="Name" placeholder="Enter Your Full Name">
+            <input required type="number" name="Contact_Number" placeholder="Enter Your Contact Number">
+            <input required type="email" name="Email" placeholder="Enter Your E-Mail">
+            <div class="timing">
+                <input required type="date" name="Date">
+                <input required type="time" name="Time">
+            </div>
+            <input required type="number" name="Number_of_people" placeholder="Enter Number of People">
+            <input type="submit" value="Book Now">
+        </form>
+        <span class="divider"></span>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us <span></span></h2> 
+        <form action="#">
+            <input required type="text" name="Name" placeholder="Enter Your Name">
+            <input required type="number" name="Contact_Number" placeholder="Enter Your Number">
+            <input required type="email" name="Email" placeholder="Enter Your E-Mail">
+            <textarea required rows="4" name="Message" placeholder="Enter Your Message" aria-expanded="false"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+        <span class="divider"></span>
+    </section>
+
+    <footer>
+        <h1>S<span>a</span>lty</h1>
+        <div class="info">
+            <h3>Useful Information</h3>
+            <ul>
+                <li><strong>Name :- </strong> Unknown</li>
+                <li><strong>Email :- </strong>company@info.com</li>
+                <li><strong>Contact :- </strong>XXX XXXX XXXX</li>
+                <li><strong>Address :- </strong>Lari Adda</li>
+                <li><strong>Opening Hours :- </strong>11am - 10pm (Mon - Sat)</li>
+            </ul>
+        </div>
+        <div class="links">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="#" onclick="backToTop()">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#book-table">Book a table</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <h3>Social Media Links</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Tik Tok</a></li>
+                <li><a href="#">Threads</a></li>
+            </ul>
+        </div>
+        <span class="divider"></span>
+        <div class="copyright">
+            <span> Copyright © <strong>Salty. </strong> All rights reserved </span><br> 
+            <span>Designed By <a href="#" target="_blank" rel="noopener noreferrer">Muhammad Ali</a></span>
+        </div>
+    </footer>
+    
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

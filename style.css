@@ -1,0 +1,1091 @@
+/* body section starts from here */
+
+body{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+body::-webkit-scrollbar{
+    width: 5px;
+    background-color: rgba(47, 79, 79, 0.473);
+    border: 5px solid rgb(91, 145, 145);;
+}
+body::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: rgb(29, 61, 61)
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* navbar starts from here */
+
+nav{
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    position: sticky;
+    top: 0px;
+    background-color: darkslategray;
+    z-index: 900;
+}
+nav span{
+    margin-left: 25px;
+    color: rgb(91, 145, 145);
+    font-size: 30px;
+}
+nav span .name{
+    margin-left: 0px;
+    color: white;
+    font-size: 30px;
+}
+.hamburger {
+    height: 40px;
+    width: 40px;
+    transform: 0.2s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hamburger .checkbox {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+  .line {
+    transition: 0.5s;
+    stroke-width: 3px;
+    stroke: white;
+  }
+  .lineTop {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 25;
+  }
+  .lineBottom {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 60;
+  }
+  .lineMid {
+    stroke-dasharray: 40 40;
+  }
+  .hamburger .checkbox:checked + svg .line {
+    stroke: rgb(91, 145, 145);
+  }
+  .hamburger .checkbox:checked + svg .lineTop {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotateZ(45deg) translate(-7px, -5px);
+  }
+  .hamburger .checkbox:checked + svg .lineMid {
+    stroke-dashoffset: 40;
+  }
+  .hamburger .checkbox:checked + svg .lineBottom {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotateZ(-45deg) translate(-5px, 5px);
+  }
+  
+nav .sidebar{
+    width: 150px;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(47, 79, 79, 0.253);
+    margin: 60px 0px 0px 0px;
+    z-index: 999;
+    display: none;
+    transition: 0.5s linear;
+    padding: 0px;
+}
+nav .sidebar li{
+    width: 100%;
+    height: 40px;
+    list-style: none;
+    padding: 20px 0px 0px 35px;
+    transition: 0.2s;
+}
+nav .sidebar li:hover{
+    background-color: rgba(47, 79, 79, 0.219);
+}
+nav .sidebar li a{
+    text-decoration: none;
+    color: white;
+    height: 40px;
+    font-size: 20px;
+    user-select: none;
+}
+nav .navbar{
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav .navbar li{
+    list-style: none;
+}
+nav .navbar li a{
+    color: white;
+    text-decoration: none;
+    transition: 0.4s linear;
+}
+nav .navbar li a:hover{
+    color: rgb(91, 145, 145);
+}
+.showOnMobile{
+    display: none;
+}
+.hideOnMobile{
+    display: block;
+}
+
+/* home section starts from here */
+
+.hero{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(47, 79, 79, 0.473);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    position: relative;
+    user-select: none;
+}
+.hero .divider{
+    width: 80%;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 50%;
+}
+.hero .container{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.hero .container h1{
+    font-size: 130px;
+    width: 100%;
+    text-align: center;
+    color: darkslategray;
+    margin-bottom: 10px;
+    animation: fade 0.85s linear;
+    animation-timeline: view(cover);
+    animation-range: entry 50% cover 50%;
+    animation-fill-mode: forwards;
+}
+.hero .container h1 span{
+    font-size: 130px;
+    color: white;
+}
+.hero .container div{
+    font-size: 22px;
+    width: 100%;
+    text-align: left;
+    color: rgb(67, 97, 97);
+    text-align: center;
+    animation: fade 0.85s linear;
+    animation-timeline: view(cover);
+    animation-range: entry 50% cover 50%;
+    animation-fill-mode: forwards;
+}
+.hero .container .btn{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: fade 0.85s linear;
+    animation-timeline: view(cover);
+    animation-range: entry 50% cover 50%;
+    animation-fill-mode: forwards;
+}
+.hero .container .btn button{
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: 3px solid darkslategray;
+    background-color: transparent;
+    transition: 0.4s linear;
+}
+.hero .container .btn button a{
+    text-decoration: none;
+    color: darkslategray;
+    font-size: 14px;
+    transition: 0.4s linear;
+}
+.hero .container .btn button:hover{
+    background-color: darkslategray;
+    cursor: pointer;
+}
+.hero .container .btn button:hover a{
+    color: white;
+}
+
+/* about section starts from here */
+
+.about{
+    width: 100%;
+    background-color: rgba(47, 79, 79, 0.473);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    user-select: none;
+}
+.about .divider{
+    width: 80%;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 50%;
+}
+.about h2{
+    font-size: 60px;
+    color: darkslategray;
+    width: calc(50% + 100px);
+    margin-top: 70px;
+    animation: fade 0.85s linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50% ;
+    animation-fill-mode: forwards;
+}
+.about h2 span{
+    position: relative;
+}
+.about h2 span::after{
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+}
+.about ul{
+    width: 80%;
+    margin-bottom: 50px;
+}
+.about ul li{
+    list-style: none;
+    line-height: 20px;
+    color: rgb(47, 79, 79);
+    font-size: 20px;
+    animation: fade 0.85s linear;
+    animation-timeline: view();
+    animation-range: entry 1% cover 30% ;
+    animation-fill-mode: forwards;
+}
+.about ul li b{
+    color: darkslategray;
+    font-size: 25px;
+}
+
+/* menu section starts from here */
+
+.menu{
+    width: 100%;
+    background-color: rgba(47, 79, 79, 0.473);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.menu .divider{
+    width: 80%;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 50%;
+}
+.menu h2{
+    font-size: 60px;
+    color: darkslategray;
+    width: calc(50% + 100px);
+    margin-top: 70px;
+    animation: fade 0.85s linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+    animation-fill-mode: forwards;
+}
+.menu h2 span{
+    position: relative;
+}
+.menu h2 span::after{
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+}
+.menu ul{
+    width: 60%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu ul li{
+    list-style: none;
+    font-size: 20px;
+    color: darkslategray;
+}
+.menu ul li:hover{
+    color: rgb(91, 145, 145);
+    cursor: pointer;
+}
+.menu .menu-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex: 1 0 400px;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.menu .menu-container .menu-item{
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s linear;
+    animation: fade 0.85s linear;
+    animation-timeline: view();
+    animation-range: entry 1% cover 30% ;
+    animation-fill-mode: forwards;
+}
+.menu .menu-container .menu-item img{
+    width: 80px;
+    height: 80px;
+    border: 3px solid darkslategray;
+    border-radius: 50%;
+}
+.menu .menu-container .menu-item .card{
+    width: 250px;
+    position: relative;
+}
+.menu .menu-container .menu-item .card .price{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: rgb(91, 145, 145);
+}
+.menu .menu-container .menu-item .card span{
+    color: darkslategray;
+}
+
+/* gallery section starts from here */
+
+.gallery{
+    width: 100%;
+    background-color: rgba(47, 79, 79, 0.473);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.gallery .divider{
+    width: 80%;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 50%;
+}
+.gallery h2{
+    font-size: 60px;
+    color: darkslategray;
+    width: calc(50% + 100px);
+    margin-top: 70px;
+    animation: fade 0.85s linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+    animation-fill-mode: forwards;
+}
+.gallery h2 span{
+    position: relative;
+}
+.gallery h2 span::after{
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+}
+.gallery .img-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1 0 600px;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+.gallery .img-container img{
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border: 3px solid darkslategray;
+    animation: fade 0.85s linear;
+    animation-timeline: view();
+    animation-range: entry 1% cover 30%;
+    animation-fill-mode: forwards;
+}
+
+/* book a table section starts from here */
+
+.book-table{
+    width: 100%;
+    max-height: 100vh;
+    background-color: rgba(47, 79, 79, 0.473);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.book-table .divider{
+    width: 80%;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 50%;
+}
+.book-table h2{
+    font-size: 60px;
+    color: darkslategray;
+    width: calc(50% + 100px);
+    margin-top: 70px;
+    animation: fade 0.85s linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+    animation-fill-mode: forwards;
+}
+.book-table h2 span{
+    position: relative;
+}
+.book-table h2 span::after{
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+}
+.book-table form{
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    animation: fade 0.85s linear;
+    animation-timeline: view();
+    animation-range: entry 1% cover 30%;
+    animation-fill-mode: forwards;
+}
+.book-table form input{
+    width: calc(50% + 100px);
+    height: 40px;
+    font-size: 17px;
+    outline: none;
+    border: 2px solid darkslategray;
+    background-color: transparent;
+    color: darkslategray;
+}
+.book-table form input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.book-table form input::placeholder{
+    padding-left: 20px;
+    color: darkslategray;
+    font-size: 17px;
+}
+.book-table form .timing{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.book-table form .timing input{
+    width: calc(25% + 45px);
+    height: 40px;
+    outline: none;
+    font-size: 17px;
+}
+.book-table form input[type = submit]{
+    width: 150px;
+    outline: none;
+    background-color: darkslategray;
+    color: white;
+    border-radius: 50px;
+}
+.book-table form input[type = submit]:hover{
+    cursor: pointer;
+}
+
+/* contact section starts from here */
+
+.contact{
+    width: 100%;
+    max-height: 100vh;
+    background-color: rgba(47, 79, 79, 0.473);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.contact .divider{
+    width: 80%;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 50%;
+}
+.contact h2{
+    font-size: 60px;
+    color: darkslategray;
+    width: calc(50% + 100px);
+    margin-top: 70px;
+    animation: fade 0.85s linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50% ;
+    animation-fill-mode: forwards;
+}
+.contact h2 span{
+    position: relative;
+}
+.contact h2 span::after{
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+}
+.contact form{
+    width: 100%;
+    margin: 0px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    animation: fade 0.85s linear;
+    animation-timeline: view();
+    animation-range: entry 1% cover 30% ;
+    animation-fill-mode: forwards;
+}
+.contact form input{
+    width: calc(50% + 100px);
+    height: 40px;
+    font-size: 17px;
+    outline: none;
+    border: 2px solid darkslategray;
+    background-color: transparent;
+    color: darkslategray;
+}
+.contact form input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.contact form textarea{
+    width: calc(50% + 100px);
+    height: 100px;
+    font-size: 17px;
+    outline: none;
+    border: 2px solid darkslategray;
+    background-color: transparent;
+    color: darkslategray;
+}
+.contact form input::placeholder{
+    padding-left: 20px;
+    color: darkslategray;
+    font-size: 17px;
+}
+.contact form textarea::placeholder{
+    padding-left: 20px;
+    color: darkslategray;
+    font-size: 17px;
+}
+.contact form input[type = submit]{
+    width: 150px;
+    outline: none;
+    border-radius: 50px;
+    background-color: darkslategray;
+    color: white;
+}
+.contact form input[type = submit]:hover{
+    cursor: pointer;
+}
+
+/* footer section starts from here */
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: rgba(47, 79, 79, 0.473);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+footer .divider{
+    width: 80%;
+    height: 2px;
+    background-color: darkslategray;
+    position: absolute;
+    bottom: 70px;
+    border-radius: 50%;
+}
+footer h1{
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    color: darkslategray;
+    position: absolute;
+    top: 5px;
+}
+footer h1 span{
+    font-size: 40px;
+    color: white;
+}
+footer .info{
+    width: 50%;
+    height: 200px;
+    margin: 0px 0px 50px 40px;
+    padding: 0px;
+}
+footer .links{
+    width: 20%;
+    height: 200px;
+    margin: 0px 0px 50px 0px;
+    padding: 0px;
+}
+footer .social-links{
+    width: 20%;
+    height: 200px;
+    margin: 0px 0px 50px 0px;
+    padding: 0px;
+}
+footer .info  h3{
+    color: darkslategray;
+    text-align: left;
+    font-size: 22px;
+}
+footer .links h3{
+    color: darkslategray;
+    text-align: left;
+    font-size: 22px;
+}
+footer .social-links h3{
+    color: darkslategray;
+    text-align: left;
+    font-size: 22px;
+}
+footer .info  ul{
+    width: 100%;
+    padding: 0px;
+    margin: 0px 0px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .links ul{
+    width: 100%;
+    padding: 0px;
+    margin: 0px 0px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+footer .social-links ul{
+    width: 100%;
+    padding: 0px;
+    margin: 0px 0px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .info ul li{
+    color: darkslategray;
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+    text-align: left;
+}
+footer .links ul li{
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .links ul li a{
+    text-decoration: none;
+    width: 100%;
+    color: darkslategray;
+    text-align: left;
+    transition: 0.4s linear;
+}
+footer .links ul li a:hover{
+    color: white;
+}
+footer .social-links ul li{
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .social-links ul li a{
+    text-decoration: none;
+    width: 100%;
+    color: darkslategray;
+    text-align: left;
+    transition: 0.4s linear;
+}
+footer .social-links ul li a:hover{
+    color: white;
+}
+footer .copyright{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10px;
+}
+footer .copyright span{
+    color: darkslategray;
+}
+footer .copyright span a{
+    color: white;
+    text-decoration: none;
+}
+
+.active{
+    color: rgb(91, 145, 145);
+}
+
+/* media queries starts from here */
+
+@media screen and (min-width : 500px) and (max-width : 780px) {
+    nav .navbar{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    nav .navbar li .hamburger{
+        position: absolute;
+        right: 10px;
+        top: -17px;
+    }
+    .showOnMobile{
+        display: block;
+    }
+    .hideOnMobile{
+        display: none;
+    }
+    footer .info{
+        width: 50%;
+        height: 200px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+    }
+    .about h2{
+        font-size: 40px;
+    }
+    .about h2 span::after{
+        width: 100px;
+    }
+    .menu h2{
+        font-size: 40px;
+    }
+    .menu h2 span::after{
+        width: 100px;
+    }
+    .gallery h2{
+        font-size: 40px;
+    }
+    .gallery h2 span::after{
+        content: "";
+        width: 100px;
+        height: 2px;
+        background-color: darkslategray;
+        position: absolute;
+        bottom: 7px;
+        left: 0px;
+    }
+    .gallery .img-container{
+        flex: 1 0 300px;
+    }
+    .gallery .img-container  img{
+        width: 300px;
+        height: 200px;
+    }
+    .book-table h2{
+        font-size: 40px;
+    }
+    .book-table h2 span::after{
+        width: 100px;
+    }
+    .contact h2{
+        font-size: 40px;
+    }
+    .contact h2 span::after{
+        width: 100px;
+    }
+    footer{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    footer .info{
+        width: 80%;
+        height: auto;
+        margin: 0px 0px 0px 100px;
+        padding: 0px;
+    }
+    footer .links{
+        width: 80%;
+        height: auto;
+        margin: 0px 0px 0px 100px;
+        padding: 0px;
+    }
+    footer .social-links{
+        width: 80%;
+        height: auto;
+        margin: 0px 0px 20px 100px;
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    nav .navbar{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    nav .navbar li .hamburger{
+        position: absolute;
+        right: 10px;
+        top: -17px;
+    }
+    .showOnMobile{
+        display: block;
+    }
+    .hideOnMobile{
+        display: none;
+    }
+    .hero{
+        height: 100vh;
+    }
+    .hero .container h1{
+        font-size: 70px;
+        margin-top: 170px;
+    }
+    .hero .container h1 span{
+        font-size: 70px;
+    }
+    .about h2{
+        font-size: 40px;
+    }
+    .about h2 span::after{
+        width: 100px;
+    }
+    .menu h2{
+        font-size: 40px;
+    }
+    .menu h2 span::after{
+        width: 100px;
+    }
+    .menu ul{
+        width: 87%;
+    }
+    .menu .menu-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex: 1 0 300px;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    .menu .menu-container .menu-item{
+        width: 300px;
+        height: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: 0.5s linear;
+        animation: fade 0.85s linear;
+        animation-timeline: view();
+        animation-range: entry 1% cover 30% ;
+        animation-fill-mode: forwards;
+    }
+    .menu .menu-container .menu-item img{
+        width: 60px;
+        height: 60px;
+        border: 3px solid darkslategray;
+        border-radius: 50%;
+    }
+    .menu .menu-container .menu-item .card{
+        width: 200px;
+    }
+    .menu .menu-container .menu-item .card span{
+        color: darkslategray;
+    }
+    .gallery h2{
+        font-size: 30px;
+    }
+    .gallery h2 span::after{
+        width: 100px;
+    }
+    .gallery .img-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex: 1 0 300px;
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+    .gallery .img-container img{
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+        border: 3px solid darkslategray;
+        animation: fade 0.85s linear;
+        animation-timeline: view();
+        animation-range: entry 1% cover 30%;
+        animation-fill-mode: forwards;
+    }
+    .book-table h2{
+        font-size: 40px;
+    }
+    .book-table h2 span::after{
+        width: 60px;
+    }
+    .contact h2{
+        font-size: 40px;
+    }
+    .contact h2 span::after{
+        width: 100px;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer .info{
+        width: 80%;
+        height: auto;
+        margin: 0px ;
+        padding: 0px;
+    }
+    footer .links{
+        width: 80%;
+        height: auto;
+        margin: 0px;
+        padding: 0px;
+    }
+    footer .social-links{
+        width: 80%;
+        height: auto;
+        margin: 0px 0px 20px 0px;
+        padding: 0px;
+    }
+}
+
+@media screen and (min-height : 840px) and (min-width : 500px) {
+    .hero{
+        width: 100vw;
+        height: 97vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 30vh;
+    }
+    nav .sidebar{
+        display: none;
+    }
+}
+
+/* animations starts from here */
+
+@keyframes fade {
+    0%{
+        scale: 0.65;
+        opacity: 0;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+
+
